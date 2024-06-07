@@ -1,0 +1,33 @@
+A business rule is a server-side script that runs when a record is displayed, inserted, updated, or deleted, or when a table is queried.
+
+Use business rules to accomplish tasks like automatically changing values in form fields when certain conditions are met, 
+or to create events for email notifications and script actions.
+
+Time the business rule should run
+	- Before
+	- After
+	- Async
+	- Display
+
+Database operation that the system takes on the record 
+	- Insert 
+	- Update
+	- Query (Before a query for a record or list of records is sent to the database. Typically you should use query 
+    for before business rules)
+	- Delete
+
+
+Primary purpose of the Display business rule is to populate g_scratchpad object. When a user requests a record 
+form data is read from the database display rule is executed and the client script has access to the g_scratchpad object and values. 
+
+Async business rule is executed after records are inserted/modified/queried
+Run asynchronously as sheduled jobs
+
+DEBUGGING
+System Log module
+Gs.info gs.log gs.error gs.warn gs.debug
+Gs.addInfoMessage gs.addErroMessage 
+
+Gs.log CANNOT be used in scoped applications
+
+SCRIPT DEBUGGER
