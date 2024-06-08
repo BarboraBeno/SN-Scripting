@@ -1,0 +1,2 @@
+addErrorMessage(Object message)
+addInfoMessage(Object message)

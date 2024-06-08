@@ -1,0 +1,5 @@
+Script includes are used to store JavaScript that runs on the server.
+
+Create script includes to store JavaScript functions and classes for use by server scripts. Each script include defines either an object class or a function.
+
+Consider using script includes instead of global business rules because script includes are only loaded on request.

@@ -1,0 +1,19 @@
+The GlideSystem API, which is referred to by the variable name gs in any server-side JavaScript, provides a number of convenient methods to get information about the system, the current logged in user, and date/time information.
+
+addErrorMessage()
+addInfoMessage()
+addMessage()
+
+Execute server-side
+Access system level information 
+- logged in user
+- system
+- date and time 
+
+Scoped Glide System logging methods
+debug()
+error()
+info()
+warn()
+isDebugging()
+

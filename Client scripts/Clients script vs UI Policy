@@ -1,0 +1,25 @@
+
+Client script an UI policy both execute client-side logic and use the same API.
+Both are used to manage forms and fields.
+
+UI Policies execute AFTER Client scripts. If there is conflicting logic the UI policy logic applies.
+
+Healthscan recommend to use UI Policies Instead of Client Scripts
+
+Client script
+    - Execute on form load
+    - Execute on form save/ submit / update
+    - Execute on form field value change
+    - Have access on form field's old value
+    - Execute before UI Policy
+    - DOES NOT set field attributes with no scripting
+    - Require control over order of execution (customize the form to add it)
+
+UI Policy
+    - Execute on form load
+    - DOES NOT execute on form save/ submit / update
+    - Execute on form field value change
+    - DOES NOT have access on form field's old value
+    - Execute after Client script (overwrite the logic)
+    - Set field attributes with no scripting
+    - Require control over order of execution

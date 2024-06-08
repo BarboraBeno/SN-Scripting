@@ -1,0 +1,31 @@
+The GlideRecord API is used for database operations.
+
+The GlideRecord API is the primary means of interfacing with the database on the server-side code. A GlideRecord is an object that contains records from a single table. 
+Use the API to instantiate a GlideRecord object and add query parameters, filters, limits, and ordering.
+
+In most cases, don’t use dot-walking to get values from a record. Dot-walking retrieves the entire object instead of the field value. Retrieving the object uses more storage and might cause undesirable results when used in arrays or in Service Portal.
+
+Instead of retrieving the entire object, you can use one of the following methods to copy the field values:
+
+getValue()
+getDisplayValue()
+
+If dot-walking through a GlideElement object is necessary, use the toString() method to retrieve values.
+
+Used for database operations instead of writing SQL queries
+
+GlideAggregate
+GlideRecordSecure
+GlideQuery
+
+The GlideQuery API is an alternative to GlideRecord to perform CRUD operations on record data from server-side scripts.
+
+var query = new global.GlideQuery('task')
+    .where('active', true) //Returns new GlideQuery object with a "where" clause.
+    .groupBy('priority') //Returns new GlideQuery object with a "group by" clause.
+    .aggregate('sum', 'reassignment_count') //Returns new GlideQuery object with a "sum(reassignment_count)" clause.
+    .having('sum', 'reassignment_count', '>', 4) //Returns new GlideQuery object with a "having reassignment_count > 4" clause.
+    .select() //Returns a stream of records wrapped in a Stream object.  
+    .forEach(function (priority){ //Terminal method in the Stream class that executes the query and returns the result. 
+      gs.info("Priority " + priority.group.priority + ": " + priority.sum.reassignment_count + " reassignments");
+    });

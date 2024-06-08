@@ -1,0 +1,16 @@
+UI policies dynamically change the behavior of information on a form and control custom process flows for tasks.
+For example, you can use UI policies to make the number field on a form read-only, make the short description field mandatory, and hide other fields. Basic UI policies do not require any scripting, however for more advanced actions, use the Run scripts option.
+You can also use client scripts to perform all of these actions, but for faster load times use UI policies when possible.
+
+
+	- Number field read only
+	- Short description field mandatory
+	- Hide fields
+
+Although a UI Policy can evaluate any field in a record regardless if it is visible to the end under, the field specified in a UI Policy Action does need to be present on the form.
+
+Conditions are only re-evaluated if a user manually changes a field on the form, if the change is made by the system it is not re-checked.
+
+OBJECTS  g_form g_user g_scratchpad
+
+System Diagnostics > Session Debug > Debug UI Policies

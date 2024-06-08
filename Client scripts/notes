@@ -1,0 +1,45 @@
+Well-designed client scripts can reduce the amount of time it takes users to complete a form.
+
+DOCS:
+Client script allow the system to run Javascript on the client (web browser) when client-based events occur, such as when a form loads, after form submission, or when a field changes value.
+
+Use client scripts to configure forms, form fields, and field values while the user is using the form.
+
+    - onLoad()
+    - onSubmit()
+    - onChange()
+    - onCellEdit()
+
+Client script can:
+	- Make fields hidden or visible
+	- Make fields read only or writable
+	- Make fields optional or mandatory based on user roles
+	- Set the value in one field based on the value in other fields
+	- Modify the options in choice list based on user role
+Display messages based on a value in a field
+
+Manage the behavior of forms, fields and lists in real time
+    - Make fields mandatory
+    - Set one field in response to another
+    - Modify choice list options 
+    - Hide / show form sections
+    - Display an alert
+    - Hide fields 
+Prohibit list editing
+
+OnCellEdit
+
+OnCellEdit Client script is typically used, when you want your client script logic to run, if the user is changing in the list edit view of servicenow.
+
+These scripts do not apply to List Widgets on homepages or dashboards
+
+One of the parameter is callback => a callback continues the execution of other related cell edit scripts
+
+You must pass back either true or false in the callback function. If true is passed as a parameter, the other scripts are executed or the change is committed if there are no more scripts. If false is passed as a parameter any further scripts are not executed and the change is not committed. 
+
+
+OBJECTS  g_form g_user g_scratchpad
+
+DEBUGGING jslog()
+Select System settings gear icon on the Header Bar. Turn on Javascript log and Field Watcher button on.
+
