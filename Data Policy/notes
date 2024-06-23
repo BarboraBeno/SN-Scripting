@@ -2,3 +2,12 @@ Data Policies enforce data consistency by setting mandatory and read-only field 
 Unlike UI Policies, Data Policies execute server-side. UI Policy logic only applies to data entered in a form.
  Data Policy logic executes regardless of how a record changes. 
  Developers cannot apply scripts to Data Policies. 
+
+ For example, suppose that you are configuring a web service that allows users from outside the platform 
+ to update problems on the ServiceNow instance. Since these problems are not updated through 
+ the instance UI, they are not subject to the UI policies on the problem form. 
+
+ Since UI policies can also manage the visibility of fields on a form, 
+ you may want to augment UI policies with data policies rather than replace them.
+
+ System Diagnostics > Session Debug > Debug Data Policies
