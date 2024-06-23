@@ -1,0 +1,4 @@
+Data Policies enforce data consistency by setting mandatory and read-only field attributes. 
+Unlike UI Policies, Data Policies execute server-side. UI Policy logic only applies to data entered in a form.
+ Data Policy logic executes regardless of how a record changes. 
+ Developers cannot apply scripts to Data Policies. 
