@@ -11,3 +11,37 @@ Unlike UI Policies, Data Policies execute server-side. UI Policy logic only appl
  you may want to augment UI policies with data policies rather than replace them.
 
  System Diagnostics > Session Debug > Debug Data Policies
+
+ When the Use as UI Policy on client option is not selected, the record needs to be submitted before the user knows the field is mandatory, and the record submission fails. In the example, the State is set to Resolved, but the form does not indicate that the Resolution code and Resolution notes fields are now mandatory.
+
+ Data Policies execute server-side logic. UI Policies execute client-side logic. 
+
+ - execute based on field values YES
+ - execute on form save/submit/update YES
+ - execute on form field value change ONLY IF Use as UI policy is selected
+ - Set field Mandatory attribute YES
+ - Set field Read only attribute YES
+ - Set field visibility attribute NO
+ - Set field attributes with no scripting YES
+ - Execute scripts for advanced logic NO
+
+ 
+ Data Policies are script-free, server-side application files.
+ Data Policies have a condition as part of the trigger. 
+ Data Policies can take different actions when the Conditions field evaluates to true or false.
+
+ Data Policy Rules do not require scripting to set field attributes:
+
+Mandatory
+Read only
+
+Data Policies are not dependent on how a record is updated.
+
+Configure the Use as UI Policy on client option to make Data Policy logic run on a form.
+
+Convert a Data Policy to a UI Policy to:
+
+Adjust field visibility
+To run a script when UI Policy conditions are met
+
+Convert a UI Policy to a Data Policy to execute logic regardless of how a record is updated.

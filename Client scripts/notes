@@ -43,3 +43,11 @@ OBJECTS  g_form g_user g_scratchpad
 DEBUGGING jslog()
 Select System settings gear icon on the Header Bar. Turn on Javascript log and Field Watcher button on.
 
+- execute based on field values YES
+ - execute on form save/submit/update NO
+ - execute on form field value change YES
+ - Set field Mandatory attribute YES
+ - Set field Read only attribute YES
+ - Set field visibility attribute YES
+ - Set field attributes with no scripting YES
+ - Execute scripts for advanced logic YES
